@@ -28,7 +28,7 @@ MIN_ORDER_AMOUNTS = {
 
 def calculate_subtotal(items: List[dict]) -> float:
     """
-    Calculate the subtotal from a list of items.
+    Calculate the order subtotal from a list of items.
 
     Args:
         items: List of dicts with 'qty' and 'unit_price' keys
