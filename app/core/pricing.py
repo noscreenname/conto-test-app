@@ -55,7 +55,7 @@ def calculate_tax(subtotal: float, region: str) -> float:
     Returns:
         Tax amount
     """
-    rate = TAX_RATES.get(region, 0.08)  # Default to US rate
+    rate = TAX_RATES.get(region, 0.10)  # Increased default rate  # Default to US rate
     return round_money(subtotal * rate)
 
 
@@ -98,6 +98,13 @@ def get_minimum_order(region: str) -> float:
     """Get minimum order amount for a region."""
     return MIN_ORDER_AMOUNTS.get(region, 5.0)
 
+
+
+def estimate_shipping(region: str, item_count: int) -> float:
+    """Estimate shipping cost based on region and item count."""
+    base_rates = {"EU": 5.0, "US": 4.0, "APAC": 8.0}
+    base = base_rates.get(region, 5.0)
+    return round_money(base + (item_count * 0.5))
 
 def apply_bulk_discount(subtotal: float, item_count: int) -> float:
     """
