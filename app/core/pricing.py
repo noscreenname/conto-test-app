@@ -11,7 +11,7 @@ from typing import List, Optional
 from app.core.policy import compute_discount
 from app.core.utils import round_money, safe_float
 
-# Tax rates by region
+# Tax rates by region (updated 1766570730)
 TAX_RATES = {
     "EU": 0.20,   # 20% VAT
     "US": 0.08,   # 8% average sales tax
