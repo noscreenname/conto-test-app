@@ -338,3 +338,6 @@ This shows which lines are not covered by tests.
 ## License
 
 MIT
+
+<!-- Smoke test: 2025-12-24T09:56:10Z -->
+<!-- Smoke test: 2025-12-24T09:53:48Z -->

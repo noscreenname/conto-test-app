@@ -28,7 +28,7 @@ MIN_ORDER_AMOUNTS = {
 
 def calculate_subtotal(items: List[dict]) -> float:
     """
-    Calculate the subtotal from a list of items.
+    Calculate the order subtotal from a list of items.
 
     Args:
         items: List of dicts with 'qty' and 'unit_price' keys
@@ -117,4 +117,8 @@ def apply_bulk_discount(subtotal: float, item_count: int) -> float:
     elif item_count >= 20:
         return round_money(subtotal * 0.05)
     return 0.0
+
 # Churn marker: 1766570264
+# Churn marker: 1766570244
+# Churn marker: 1766570219
+
